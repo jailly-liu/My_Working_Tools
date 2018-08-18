@@ -1,0 +1,73 @@
+{% extends "index.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/hexToStr.css">
+{% endblock %}
+
+{% block content %}
+
+    <!-- 16进制码转utf8 -->
+    <div class="wrap">
+
+        <div class="inputbox">
+            <p>
+                <button type="button" class="btn btn-success UTF8ToHex-btn">16进制码</button>
+                {% include 'tip-icon.html' %}
+            </p>
+            <textarea class="ta hexForUTF8-ta" rows="5" data-toggle="popover" title="Tips" data-placement="top"></textarea>
+
+        </div>
+
+        <div class="iconbox">
+            <span class="glyphicon glyphicon-resize-horizontal trans-icon"></span>
+        </div>
+
+        <div class="inputbox">
+            <p>
+                <button type="button" class="btn btn-info hexToUTF8-btn">UTF-8 字符串</button>
+            </p>
+            <textarea class="ta hexToUTF8-ta" rows="5"></textarea>
+        </div>
+
+        <div class="hint-box"></div>
+
+    </div>
+
+    <hr>
+
+    <!-- 16进制码转gbk -->
+    <div class="wrap">
+
+        <div class="inputbox">
+            <p>
+                <button type="button" class="btn btn-success GBKToHex-btn">16进制码</button>
+                {% include 'tip-icon.html' %}
+            </p>
+            <textarea class="ta hexForGBK-ta" rows="5" data-toggle="popover" title="Tips" data-placement="top"></textarea>
+
+        </div>
+
+        <div class="iconbox">
+            <span class="glyphicon glyphicon-resize-horizontal trans-icon"></span>
+        </div>
+
+        <div class="inputbox">
+            <p>
+                <button type="button" class="btn btn-info hexToGBK-btn">GBK 字符串</button>
+            </p>
+            <textarea class="ta hexToGBK-ta" rows="5"></textarea>
+        </div>
+
+        <div class="hint-box"></div>
+
+    </div>
+
+    {% csrf_token %}
+
+{% endblock %}
+
+{% block js %}
+    <script src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/hexToStr.js"></script>
+
+{% endblock %}

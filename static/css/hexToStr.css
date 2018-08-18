@@ -1,0 +1,44 @@
+@media screen and (max-width: 639px){
+
+}
+
+.wrap{
+    height:150px;
+
+}
+
+.wrap>div{
+    height:100%;
+}
+
+
+.inputbox{
+    float:left;
+    width:30%;
+    position:relative;
+}
+
+.ta{
+    width:100%;
+}
+
+.iconbox{
+    float:left;
+    margin:0 2%;
+    padding-top:70px;
+}
+
+.tip-icon{
+    color:#2aabd2;
+
+}
+
+.tip-icon:hover{
+    text-decoration: none;
+}
+
+.trans-icon{
+    font-size: 50px;
+    color: #cb9316;
+}
+
